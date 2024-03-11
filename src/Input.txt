@@ -1,0 +1,10 @@
+epsilon = 0.1
+kappas = 200.0
+kappab = 0
+dt = 0.001
+itermax = 1
+iterstart = 0
+lambda_b = 3.59
+chargehop_type = 1
+MStep = 1
+MSDstart = 10

@@ -1,0 +1,24 @@
+# Make the following directories in the same file path as the source codes:
+
+mkdir prop
+mkdir txt
+mkdir xyz
+mkdir mm
+mkdir decomp
+----------------------------------------------------------------------------------
+
+# Configure compiler:
+
+source /opt/intel/oneapi/setvars.sh
+----------------------------------------------------------------------------------
+
+# Once the Intel C compiler and Intel MKL libraries are installed, compile with:
+
+icc -O3 -qopenmp -mkl -o run.out main.c
+----------------------------------------------------------------------------------
+
+# Run the code from the same directory using the executable with the following parameters: 
+
+polymer concentration(-c) # of monomers(-b) # of chains(-a) tmax(-t) trajectory # (-p) num_threads(-n) restart (-r) Ncharges (-h) Debye length (-l) adjacent hop barrier (-x) nonadjacent hop barrier (-y) 
+
+./run.out -c 0.1 -b 100 -a 1 -t 10000000 -p 1 -n 4 -h 100 -x 3 -y 3 -l 3
